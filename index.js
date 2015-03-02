@@ -54,10 +54,7 @@ ESLintTask.prototype.enqueue = function(gulp, params) {
   }, {});
 
   var dirs = params.dirs.map(function(dir) {
-    return path.join(
-      module.parent.require('path').resolve(dir),
-      '**/*.js'
-    );
+    return module.parent.require('path').resolve(dir);
   });
 
   gulp.src(dirs)
