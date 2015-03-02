@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/cdebotton/pruno-eslint",
   "dependencies": {
+    "babel-eslint": "^1.0.12",
+    "eslint": "^0.15.1",
     "gulp-eslint": "^0.5.0",
     "object-assign": "^2.0.0"
   }

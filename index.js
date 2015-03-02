@@ -1,5 +1,6 @@
 "use strict"
 
+var path = require('path');
 var eslint = require('gulp-eslint');
 var assign = require('object-assign');
 
@@ -17,15 +18,15 @@ ESLintTask.getDefaults = function() {
       "node": true
     },
     "rules": {
+      "camelcase": [2],
       "strict": [2],
-      "camelCase": [2],
       "no-comma-dangle": [2],
       "quotes": [2, "double"],
       "eol-last": [0],
       "no-mixed-requires": [0],
       "no-underscore-dangle": [0]
     },
-    "dirs": ["::src", "./api"],
+    "dirs": ["::src/**/*.js", "./api/**/*.js"],
     "format": "stylish",
     "useEslintrc": false
   }
@@ -46,7 +47,10 @@ ESLintTask.prototype.enqueue = function(gulp, params) {
   }, {});
 
   var dirs = params.dirs.map(function(dir) {
-    return module.parent.require('path').resolve(dir);
+    return path.join(
+      module.parent.require('path').resolve(dir),
+      '**/*.js'
+    );
   });
 
   gulp.src(dirs)
