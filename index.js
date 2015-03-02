@@ -18,13 +18,20 @@ ESLintTask.getDefaults = function() {
       "node": true
     },
     "rules": {
-      "camelcase": [2],
-      "strict": [2],
-      "no-comma-dangle": [2],
-      "quotes": [2, "double"],
-      "eol-last": [0],
-      "no-mixed-requires": [0],
-      "no-underscore-dangle": [0]
+      "strict": [0],
+      "no-underscore-dangle": [0],
+      "no-unused-vars": [0],
+      "curly": [0],
+      "no-multi-spaces": [0],
+      "key-spacing": [0],
+      "no-return-assign": [0],
+      "consistent-return": [0],
+      "no-shadow": [0],
+      "no-comma-dangle": [0],
+      "no-use-before-define": [0],
+      "no-empty": [0],
+      "new-parens": [0],
+      "no-cond-assign": [0]
     },
     "dirs": ["::src/**/*.js", "./api/**/*.js"],
     "format": "stylish",
