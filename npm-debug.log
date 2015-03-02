@@ -1,27 +1,103 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'version',
-1 verbose cli   'patch' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
 2 info using npm@2.5.1
 3 info using node@v0.12.0
-4 info git [ 'status', '--porcelain' ]
-5 verbose stack Error: Git working directory not clean.
-5 verbose stack M index.js
-5 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:138:37
-5 verbose stack     at ChildProcess.exithandler (child_process.js:735:7)
-5 verbose stack     at ChildProcess.emit (events.js:110:17)
-5 verbose stack     at maybeClose (child_process.js:1008:16)
-5 verbose stack     at Socket.<anonymous> (child_process.js:1176:11)
-5 verbose stack     at Socket.emit (events.js:107:17)
-5 verbose stack     at Pipe.close (net.js:476:12)
-6 verbose cwd /Users/debotton/npm-dev/pruno-eslint
-7 error Darwin 14.0.0
-8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "version" "patch"
-9 error node v0.12.0
-10 error npm  v2.5.1
-11 error Git working directory not clean.
-11 error M index.js
-12 error If you need help, you may report this error at:
-12 error     <http://github.com/npm/npm/issues>
-13 verbose exit [ 1, true ]
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/debotton/npm-dev/pruno-eslint',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/debotton/.npm/pruno-eslint/0.2.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/debotton/.npm/pruno-eslint/0.2.1/package.tgz',
+9 verbose tar pack   '/Users/debotton/npm-dev/pruno-eslint' ]
+10 verbose tarball /Users/debotton/.npm/pruno-eslint/0.2.1/package.tgz
+11 verbose folder /Users/debotton/npm-dev/pruno-eslint
+12 info prepublish pruno-eslint@0.2.1
+13 verbose addLocalTarball adding from inside cache /Users/debotton/.npm/pruno-eslint/0.2.1/package.tgz
+14 silly cache afterAdd pruno-eslint@0.2.1
+15 verbose afterAdd /Users/debotton/.npm/pruno-eslint/0.2.1/package/package.json not in flight; writing
+16 verbose afterAdd /Users/debotton/.npm/pruno-eslint/0.2.1/package/package.json written
+17 silly publish { name: 'pruno-eslint',
+17 silly publish   version: '0.2.1',
+17 silly publish   description: 'A simple eslint module for pruno with babeljs (es6/7/react) support.',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'https://github.com:cdebotton/pruno-eslint.git' },
+17 silly publish   keywords: [ 'lint', 'eslint', 'pruno' ],
+17 silly publish   author:
+17 silly publish    { name: 'Christian de Botton',
+17 silly publish      email: 'debotton@brooklynunited.com' },
+17 silly publish   license: 'ISC',
+17 silly publish   bugs: { url: 'https://github.com/cdebotton/pruno-eslint/issues' },
+17 silly publish   homepage: 'https://github.com/cdebotton/pruno-eslint',
+17 silly publish   dependencies:
+17 silly publish    { 'babel-eslint': '^1.0.12',
+17 silly publish      eslint: '^0.15.1',
+17 silly publish      'gulp-eslint': '^0.5.0',
+17 silly publish      'object-assign': '^2.0.0' },
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: '1a100123732d20051d445441e654968d3d15ab32',
+17 silly publish   _id: 'pruno-eslint@0.2.1',
+17 silly publish   _shasum: '9380af9366ba3ad0eb96300c2c9dbe53bb50fb63',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name pruno-eslint
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/pruno-eslint
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/debotton/.npm/pruno-eslint/0.2.1/package.tgz
+24 verbose request uri https://registry.npmjs.org/pruno-eslint
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 2:03:56 PM
+27 verbose request id 9a8b17f4c3dfe48d
+28 http request PUT https://registry.npmjs.org/pruno-eslint
+29 http 403 https://registry.npmjs.org/pruno-eslint
+30 verbose headers { date: 'Mon, 02 Mar 2015 19:03:57 GMT',
+30 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '2694',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   'x-served-by': 'cache-jfk1029-JFK',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1425323037.109016,VS0,VE92',
+30 verbose headers   'keep-alive': 'timeout=10, max=50',
+30 verbose headers   connection: 'Keep-Alive' }
+31 verbose request invalidating /Users/debotton/.npm/registry.npmjs.org/pruno-eslint on PUT
+32 error publish Failed PUT 403
+33 verbose stack Error: forbidden cannot modify pre-existing version: 0.2.1
+33 verbose stack old={"name":"pruno-eslint","version":"0.2.1","description":"A simple eslint module for pruno with babeljs (es6/7/react) support.","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com:cdebotton/pruno-eslint.git"},"keywords":["lint","eslint","pruno"],"author":{"name":"Christian de Botton","email":"debotton@brooklynunited.com"},"license":"ISC","bugs":{"url":"https://github.com/cdebotton/pruno-eslint/issues"},"homepage":"https://github.com/cdebotton/pruno-eslint","dependencies":{"babel-eslint":"^1.0.12","eslint":"^0.15.1","gulp-eslint":"^0.5.0","object-assign":"^2.0.0"},"gitHead":"1a100123732d20051d445441e654968d3d15ab32","_id":"pruno-eslint@0.2.1","_shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","_from":".","_npmVersion":"2.5.1","_nodeVersion":"0.12.0","_npmUser":{"name":"cdebotton","email":"debotton@brooklynunited.com"},"maintainers":[{"name":"cdebotton","email":"debotton@brooklynunited.com"}],"dist":{"shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","tarball":"http://registry.npmjs.org/pruno-eslint/-/pruno-eslint-0.2.1.tgz"}}
+33 verbose stack new={"name":"pruno-eslint","version":"0.2.1","description":"A simple eslint module for pruno with babeljs (es6/7/react) support.","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com:cdebotton/pruno-eslint.git"},"keywords":["lint","eslint","pruno"],"author":{"name":"Christian de Botton","email":"debotton@brooklynunited.com"},"license":"ISC","bugs":{"url":"https://github.com/cdebotton/pruno-eslint/issues"},"homepage":"https://github.com/cdebotton/pruno-eslint","dependencies":{"babel-eslint":"^1.0.12","eslint":"^0.15.1","gulp-eslint":"^0.5.0","object-assign":"^2.0.0"},"readme":"ERROR: No README data found!","readmeFilename":"README.md","gitHead":"1a100123732d20051d445441e654968d3d15ab32","_id":"pruno-eslint@0.2.1","_shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","_from":".","_npmVersion":"2.5.1","_nodeVersion":"0.12.0","_npmUser":{"name":"cdebotton","email":"debotton@brooklynunited.com"},"maintainers":[{"name":"cdebotton","email":"debotton@brooklynunited.com"}],"dist":{"shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","tarball":"http://registry.npmjs.org/pruno-eslint/-/pruno-eslint-0.2.1.tgz"}}: pruno-eslint
+33 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:254:14)
+33 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+33 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
+33 verbose stack     at Request.emit (events.js:110:17)
+33 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+33 verbose stack     at Request.emit (events.js:129:20)
+33 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+33 verbose stack     at IncomingMessage.emit (events.js:129:20)
+33 verbose stack     at _stream_readable.js:908:16
+33 verbose stack     at process._tickCallback (node.js:355:11)
+34 verbose statusCode 403
+35 verbose pkgid pruno-eslint
+36 verbose cwd /Users/debotton/npm-dev/pruno-eslint
+37 error Darwin 14.0.0
+38 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+39 error node v0.12.0
+40 error npm  v2.5.1
+41 error code E403
+42 error forbidden cannot modify pre-existing version: 0.2.1
+42 error old={"name":"pruno-eslint","version":"0.2.1","description":"A simple eslint module for pruno with babeljs (es6/7/react) support.","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com:cdebotton/pruno-eslint.git"},"keywords":["lint","eslint","pruno"],"author":{"name":"Christian de Botton","email":"debotton@brooklynunited.com"},"license":"ISC","bugs":{"url":"https://github.com/cdebotton/pruno-eslint/issues"},"homepage":"https://github.com/cdebotton/pruno-eslint","dependencies":{"babel-eslint":"^1.0.12","eslint":"^0.15.1","gulp-eslint":"^0.5.0","object-assign":"^2.0.0"},"gitHead":"1a100123732d20051d445441e654968d3d15ab32","_id":"pruno-eslint@0.2.1","_shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","_from":".","_npmVersion":"2.5.1","_nodeVersion":"0.12.0","_npmUser":{"name":"cdebotton","email":"debotton@brooklynunited.com"},"maintainers":[{"name":"cdebotton","email":"debotton@brooklynunited.com"}],"dist":{"shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","tarball":"http://registry.npmjs.org/pruno-eslint/-/pruno-eslint-0.2.1.tgz"}}
+42 error new={"name":"pruno-eslint","version":"0.2.1","description":"A simple eslint module for pruno with babeljs (es6/7/react) support.","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com:cdebotton/pruno-eslint.git"},"keywords":["lint","eslint","pruno"],"author":{"name":"Christian de Botton","email":"debotton@brooklynunited.com"},"license":"ISC","bugs":{"url":"https://github.com/cdebotton/pruno-eslint/issues"},"homepage":"https://github.com/cdebotton/pruno-eslint","dependencies":{"babel-eslint":"^1.0.12","eslint":"^0.15.1","gulp-eslint":"^0.5.0","object-assign":"^2.0.0"},"readme":"ERROR: No README data found!","readmeFilename":"README.md","gitHead":"1a100123732d20051d445441e654968d3d15ab32","_id":"pruno-eslint@0.2.1","_shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","_from":".","_npmVersion":"2.5.1","_nodeVersion":"0.12.0","_npmUser":{"name":"cdebotton","email":"debotton@brooklynunited.com"},"maintainers":[{"name":"cdebotton","email":"debotton@brooklynunited.com"}],"dist":{"shasum":"9380af9366ba3ad0eb96300c2c9dbe53bb50fb63","tarball":"http://registry.npmjs.org/pruno-eslint/-/pruno-eslint-0.2.1.tgz"}}: pruno-eslint
+43 error If you need help, you may report this error at:
+43 error     <http://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]
