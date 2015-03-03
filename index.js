@@ -23,7 +23,6 @@ ESLintTask.getDefaults = function() {
       "no-new-wrappers": 2,
       "no-sequences": 2,
       "no-var": 2,
-      "max-depth": [1, 2],
       "generator-star": [1, "end"],
       "max-params": [1, 3],
       "max-depth": [1, 2],
