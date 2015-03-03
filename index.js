@@ -18,6 +18,9 @@ ESLintTask.getDefaults = function() {
       "node": true
     },
     "rules": {
+      "radix": 1,
+      "max-nested-callbacks": [2, 1],
+      "no-new-wrappers": 2,
       "no-sequences": 2,
       "no-var": 2,
       "max-depth": [1, 2],
