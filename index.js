@@ -19,7 +19,7 @@ ESLintTask.getDefaults = function() {
     },
     "rules": {
       "radix": 1,
-      "max-nested-callbacks": [2, 1],
+      "max-nested-callbacks": [2, 3],
       "no-new-wrappers": 2,
       "no-sequences": 2,
       "no-var": 2,
