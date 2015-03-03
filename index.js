@@ -43,6 +43,7 @@ ESLintTask.getDefaults = function() {
       "no-cond-assign": 0
     },
     "dirs": ["::src/**/*.js", "./api/**/*.js"],
+    "search": ["::src/**/*.js", "./api/**/*.js"],
     "format": "stylish",
     "useEslintrc": false
   }
