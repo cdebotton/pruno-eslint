@@ -18,6 +18,13 @@ ESLintTask.getDefaults = function() {
       "node": true
     },
     "rules": {
+      "no-sequences": 2,
+      "no-var": 2,
+      "max-depth": [1, 2],
+      "generator-star": [1, "end"],
+      "max-params": [1, 3],
+      "max-depth": [1, 2],
+      "max-len": [2, 80, 4],
       "strict": 0,
       "no-underscore-dangle": 0,
       "no-unused-vars": 0,
