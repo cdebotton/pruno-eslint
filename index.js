@@ -12,7 +12,6 @@ ESLintTask.displayName = "ESLintTask";
 
 ESLintTask.getDefaults = function() {
   return {
-    "parser": "babel-eslint",
     "envs": {
       "browser": true,
       "node": true
@@ -45,7 +44,7 @@ ESLintTask.getDefaults = function() {
     "dirs": ["::src/**/*.js", "./api/**/*.js"],
     "search": ["::src/**/*.js", "./api/**/*.js"],
     "format": "stylish",
-    "useEslintrc": false
+    "useEslintrc": true
   }
 };
 
