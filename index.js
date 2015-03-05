@@ -2,6 +2,7 @@
 
 var path = require('path');
 var eslint = require('gulp-eslint');
+var plumber = require('gulp-plumber');
 var assign = require('object-assign');
 
 function ESLintTask(params) {
@@ -68,6 +69,7 @@ ESLintTask.prototype.enqueue = function(gulp, params) {
 
   gulp.src(dirs)
     .pipe(eslint(options))
+    .pipe(plumber())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 };
