@@ -1,6 +1,6 @@
 {
   "name": "pruno-eslint",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "A simple eslint module for pruno with babeljs (es6/7/react) support.",
   "main": "index.js",
   "scripts": {
