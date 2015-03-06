@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/cdebotton/npm/bin/npm', 'version', 'patch' ]
+2 info using npm@2.2.0
+3 info using node@v0.12.0
+4 verbose node symlink /usr/local/bin/node
+5 info git [ 'status', '--porcelain' ]
+6 verbose version.write data { name: 'pruno-eslint',
+6 verbose version.write   version: '0.8.2',
+6 verbose version.write   description: 'A simple eslint module for pruno with babeljs (es6/7/react) support.',
+6 verbose version.write   main: 'index.js',
+6 verbose version.write   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+6 verbose version.write   repository:
+6 verbose version.write    { type: 'git',
+6 verbose version.write      url: 'https://github.com:cdebotton/pruno-eslint.git' },
+6 verbose version.write   keywords: [ 'lint', 'eslint', 'pruno' ],
+6 verbose version.write   author: 'Christian de Botton <debotton@brooklynunited.com>',
+6 verbose version.write   license: 'ISC',
+6 verbose version.write   bugs: { url: 'https://github.com/cdebotton/pruno-eslint/issues' },
+6 verbose version.write   homepage: 'https://github.com/cdebotton/pruno-eslint',
+6 verbose version.write   dependencies:
+6 verbose version.write    { 'gulp-eslint': '^0.5.0',
+6 verbose version.write      'gulp-plumber': '^0.6.6',
+6 verbose version.write      'object-assign': '^2.0.0' },
+6 verbose version.write   peerDependencies: { 'babel-eslint': '^1.0.13', eslint: '^0.15.1' } } to package.json
+7 info git [ 'add', 'package.json' ]
+8 info git [ 'commit', '-m', '0.8.2' ]
+9 info git [ 'tag', 'v0.8.2', '-am', '0.8.2' ]
+10 verbose stack Error: Command failed: git tag v0.8.2 -am 0.8.2
+10 verbose stack fatal: tag 'v0.8.2' already exists
+10 verbose stack
+10 verbose stack     at ChildProcess.exithandler (child_process.js:744:12)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1008:16)
+10 verbose stack     at Socket.<anonymous> (child_process.js:1176:11)
+10 verbose stack     at Socket.emit (events.js:107:17)
+10 verbose stack     at Pipe.close (net.js:476:12)
+11 verbose cwd /Users/cdebotton/npm-packages/pruno-eslint
+12 error Darwin 14.0.0
+13 error argv "node" "/Users/cdebotton/npm/bin/npm" "version" "patch"
+14 error node v0.12.0
+15 error npm  v2.2.0
+16 error code 128
+17 error Command failed: git tag v0.8.2 -am 0.8.2
+17 error fatal: tag 'v0.8.2' already exists
+18 error If you need help, you may report this error at:
+18 error     <http://github.com/npm/npm/issues>
+19 verbose exit [ 1, true ]
