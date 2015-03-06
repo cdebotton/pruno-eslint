@@ -27,7 +27,7 @@
     "object-assign": "^2.0.0"
   },
   "peerDependencies": {
-    "babel-eslint": "^1.0.12",
+    "babel-eslint": "git+https://git@github.com/babel/babel-eslint.git",
     "eslint": "^0.15.1"
   }
 }
